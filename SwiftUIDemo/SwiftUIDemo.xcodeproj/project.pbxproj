@@ -18,6 +18,8 @@
 		9F19E9892BA574940059D8A1 /* ToggleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9882BA574940059D8A1 /* ToggleDemo.swift */; };
 		9F19E98B2BA574ED0059D8A1 /* SliderDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E98A2BA574ED0059D8A1 /* SliderDemo.swift */; };
 		9F19E98D2BA575390059D8A1 /* ImageViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E98C2BA575390059D8A1 /* ImageViewDemo.swift */; };
+		9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E98E2BA5758B0059D8A1 /* ShapesDemo.swift */; };
+		9F19E9912BA575A90059D8A1 /* CombineShapesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9902BA575A90059D8A1 /* CombineShapesDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		9F19E9882BA574940059D8A1 /* ToggleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleDemo.swift; sourceTree = "<group>"; };
 		9F19E98A2BA574ED0059D8A1 /* SliderDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderDemo.swift; sourceTree = "<group>"; };
 		9F19E98C2BA575390059D8A1 /* ImageViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewDemo.swift; sourceTree = "<group>"; };
+		9F19E98E2BA5758B0059D8A1 /* ShapesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesDemo.swift; sourceTree = "<group>"; };
+		9F19E9902BA575A90059D8A1 /* CombineShapesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineShapesDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				9F19E9882BA574940059D8A1 /* ToggleDemo.swift */,
 				9F19E98A2BA574ED0059D8A1 /* SliderDemo.swift */,
 				9F19E98C2BA575390059D8A1 /* ImageViewDemo.swift */,
+				9F19E98E2BA5758B0059D8A1 /* ShapesDemo.swift */,
+				9F19E9902BA575A90059D8A1 /* CombineShapesDemo.swift */,
 			);
 			path = UIcomponents;
 			sourceTree = "<group>";
@@ -166,10 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */,
 				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
 				9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */,
 				9F19E9892BA574940059D8A1 /* ToggleDemo.swift in Sources */,
 				9F19E98B2BA574ED0059D8A1 /* SliderDemo.swift in Sources */,
+				9F19E9912BA575A90059D8A1 /* CombineShapesDemo.swift in Sources */,
 				9F19E9722BA5722C0059D8A1 /* ContentView.swift in Sources */,
 				9F19E9702BA5722C0059D8A1 /* SwiftUIDemoApp.swift in Sources */,
 				9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */,
