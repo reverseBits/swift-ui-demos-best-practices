@@ -17,6 +17,7 @@
 		9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9862BA574450059D8A1 /* LabelDemo.swift */; };
 		9F19E9892BA574940059D8A1 /* ToggleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9882BA574940059D8A1 /* ToggleDemo.swift */; };
 		9F19E98B2BA574ED0059D8A1 /* SliderDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E98A2BA574ED0059D8A1 /* SliderDemo.swift */; };
+		9F19E98D2BA575390059D8A1 /* ImageViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E98C2BA575390059D8A1 /* ImageViewDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9F19E9862BA574450059D8A1 /* LabelDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDemo.swift; sourceTree = "<group>"; };
 		9F19E9882BA574940059D8A1 /* ToggleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleDemo.swift; sourceTree = "<group>"; };
 		9F19E98A2BA574ED0059D8A1 /* SliderDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderDemo.swift; sourceTree = "<group>"; };
+		9F19E98C2BA575390059D8A1 /* ImageViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				9F19E9862BA574450059D8A1 /* LabelDemo.swift */,
 				9F19E9882BA574940059D8A1 /* ToggleDemo.swift */,
 				9F19E98A2BA574ED0059D8A1 /* SliderDemo.swift */,
+				9F19E98C2BA575390059D8A1 /* ImageViewDemo.swift */,
 			);
 			path = UIcomponents;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				9F19E9722BA5722C0059D8A1 /* ContentView.swift in Sources */,
 				9F19E9702BA5722C0059D8A1 /* SwiftUIDemoApp.swift in Sources */,
 				9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */,
+				9F19E98D2BA575390059D8A1 /* ImageViewDemo.swift in Sources */,
 				9F19E9852BA573F60059D8A1 /* FormDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
