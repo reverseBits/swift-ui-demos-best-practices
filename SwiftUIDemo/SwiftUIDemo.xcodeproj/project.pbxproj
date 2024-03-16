@@ -14,6 +14,7 @@
 		9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */; };
 		9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9822BA573A20059D8A1 /* TextFieldDemo.swift */; };
 		9F19E9852BA573F60059D8A1 /* FormDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9842BA573F60059D8A1 /* FormDemo.swift */; };
+		9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9862BA574450059D8A1 /* LabelDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDemo.swift; sourceTree = "<group>"; };
 		9F19E9822BA573A20059D8A1 /* TextFieldDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDemo.swift; sourceTree = "<group>"; };
 		9F19E9842BA573F60059D8A1 /* FormDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemo.swift; sourceTree = "<group>"; };
+		9F19E9862BA574450059D8A1 /* LabelDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */,
 				9F19E9822BA573A20059D8A1 /* TextFieldDemo.swift */,
 				9F19E9842BA573F60059D8A1 /* FormDemo.swift */,
+				9F19E9862BA574450059D8A1 /* LabelDemo.swift */,
 			);
 			path = UIcomponents;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
+				9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */,
 				9F19E9722BA5722C0059D8A1 /* ContentView.swift in Sources */,
 				9F19E9702BA5722C0059D8A1 /* SwiftUIDemoApp.swift in Sources */,
 				9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */,
