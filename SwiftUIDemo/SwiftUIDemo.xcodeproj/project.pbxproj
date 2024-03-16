@@ -12,6 +12,7 @@
 		9F19E9742BA5722D0059D8A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F19E9732BA5722D0059D8A1 /* Assets.xcassets */; };
 		9F19E9772BA5722D0059D8A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F19E9762BA5722D0059D8A1 /* Preview Assets.xcassets */; };
 		9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */; };
+		9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9822BA573A20059D8A1 /* TextFieldDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		9F19E9732BA5722D0059D8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F19E9762BA5722D0059D8A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDemo.swift; sourceTree = "<group>"; };
+		9F19E9822BA573A20059D8A1 /* TextFieldDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */,
+				9F19E9822BA573A20059D8A1 /* TextFieldDemo.swift */,
 			);
 			path = UIcomponents;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
 				9F19E9722BA5722C0059D8A1 /* ContentView.swift in Sources */,
 				9F19E9702BA5722C0059D8A1 /* SwiftUIDemoApp.swift in Sources */,
 				9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */,
