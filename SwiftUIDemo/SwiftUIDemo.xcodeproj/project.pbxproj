@@ -25,6 +25,7 @@
 		9F19E9972BA576650059D8A1 /* HorizontalScrollViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9962BA576650059D8A1 /* HorizontalScrollViewDemo.swift */; };
 		9F19E99B2BA5795F0059D8A1 /* PickerViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E99A2BA5795F0059D8A1 /* PickerViewDemo.swift */; };
 		9F19E99D2BA583DC0059D8A1 /* StepperDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E99C2BA583DC0059D8A1 /* StepperDemo.swift */; };
+		9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9F19E9962BA576650059D8A1 /* HorizontalScrollViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollViewDemo.swift; sourceTree = "<group>"; };
 		9F19E99A2BA5795F0059D8A1 /* PickerViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDemo.swift; sourceTree = "<group>"; };
 		9F19E99C2BA583DC0059D8A1 /* StepperDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperDemo.swift; sourceTree = "<group>"; };
+		9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				9F19E9962BA576650059D8A1 /* HorizontalScrollViewDemo.swift */,
 				9F19E99A2BA5795F0059D8A1 /* PickerViewDemo.swift */,
 				9F19E99C2BA583DC0059D8A1 /* StepperDemo.swift */,
+				9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */,
 			);
 			path = UIcomponents;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */,
 				9F19E9972BA576650059D8A1 /* HorizontalScrollViewDemo.swift in Sources */,
 				9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */,
 				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
