@@ -28,6 +28,7 @@
 		9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */; };
 		9F19E9A12BA588B50059D8A1 /* ColorPickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9A02BA588B50059D8A1 /* ColorPickerDemo.swift */; };
 		9F678F1E2BCA782700F68D36 /* DatePickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */; };
+		9F678F222BCA7C7F00F68D36 /* WebViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorDemo.swift; sourceTree = "<group>"; };
 		9F19E9A02BA588B50059D8A1 /* ColorPickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDemo.swift; sourceTree = "<group>"; };
 		9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemo.swift; sourceTree = "<group>"; };
+		9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */,
 				9F19E9A02BA588B50059D8A1 /* ColorPickerDemo.swift */,
 				9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */,
+				9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */,
 			);
 			path = UIcomponents;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
 				9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */,
 				9F19E99D2BA583DC0059D8A1 /* StepperDemo.swift in Sources */,
+				9F678F222BCA7C7F00F68D36 /* WebViewDemo.swift in Sources */,
 				9F678F1E2BCA782700F68D36 /* DatePickerDemo.swift in Sources */,
 				9F19E9892BA574940059D8A1 /* ToggleDemo.swift in Sources */,
 				9F19E9932BA575EC0059D8A1 /* StackViewDemo.swift in Sources */,
