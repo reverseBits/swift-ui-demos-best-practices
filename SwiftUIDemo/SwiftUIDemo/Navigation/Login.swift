@@ -10,6 +10,7 @@ import SwiftUI
 struct Login: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var isPasswordVisible = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -71,11 +72,27 @@ struct Login: View {
                                         .font(.subheadline)
                                         .foregroundStyle(Color(red: 1/255, green: 131/255, blue: 80/255))
                                     VStack(spacing: 2) {
-                                        SecureField("Enter a password", text: $password)
-                                            .submitLabel(.next)
-                                            .textFieldStyle(.plain)
-                                            .textContentType(.password)
-                                            .keyboardType(.default)
+                                        HStack {
+                                            if isPasswordVisible {
+                                                TextField("Enter a password", text: $password)
+                                                    .textFieldStyle(.plain)
+                                                    .textContentType(.password)
+                                                    .keyboardType(.default)
+                                            } else {
+                                                SecureField("Enter a password", text: $password)
+                                                    .textFieldStyle(.plain)
+                                                    .textContentType(.password)
+                                                    .keyboardType(.default)
+                                            }
+                                            
+                                            Button(action: {
+                                                isPasswordVisible.toggle()
+                                            }) {
+                                                Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                                                    .foregroundColor(.gray)
+                                            }
+                                            .buttonStyle(PlainButtonStyle())
+                                        }
                                         Rectangle()
                                             .frame(height: 1)
                                             .foregroundStyle(Color(red: 217/255, green: 217/255, blue: 217/255))
