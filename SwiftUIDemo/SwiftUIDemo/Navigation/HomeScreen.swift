@@ -34,7 +34,7 @@ struct HomeScreen: View {
                         print("Open Vessel schedule")
                     }
                     .padding(6)
-                    .font(.caption)
+                    .font(.caption2)
                     .foregroundStyle(.white)
                     .background(
                         RoundedRectangle(cornerRadius: 4)
@@ -102,7 +102,7 @@ struct HomeScreen: View {
                         .fontWeight(.medium)
                         .background(Color.white)
                         .foregroundColor(Color(red: 1/255, green: 131/255, blue: 80/255))
-                        .cornerRadius(6)
+                        .cornerRadius(3)
                     }
                     .padding(.horizontal, 14)
                     .padding(.top, 300)

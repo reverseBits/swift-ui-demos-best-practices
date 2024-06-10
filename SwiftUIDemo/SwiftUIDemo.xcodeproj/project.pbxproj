@@ -31,6 +31,8 @@
 		9F2C48BF2C01FFED0060F198 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */; };
 		9F678F1E2BCA782700F68D36 /* DatePickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */; };
 		9F678F222BCA7C7F00F68D36 /* WebViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */; };
+		9F85A9042C16BF2A00097B06 /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */; };
+		9F85A9072C16BF8000097B06 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85A9062C16BF8000097B06 /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemo.swift; sourceTree = "<group>"; };
 		9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemo.swift; sourceTree = "<group>"; };
+		9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
+		9F85A9062C16BF8000097B06 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +141,20 @@
 		9F2C48B92C01C0550060F198 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				9F85A9052C16BF6A00097B06 /* Models */,
 				9F2C48BA2C01C1190060F198 /* Login.swift */,
 				9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */,
+				9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		9F85A9052C16BF6A00097B06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F85A9062C16BF8000097B06 /* Countries.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2C48BB2C01C1190060F198 /* Login.swift in Sources */,
+				9F85A9042C16BF2A00097B06 /* NavigationDemo.swift in Sources */,
 				9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */,
 				9F19E9972BA576650059D8A1 /* HorizontalScrollViewDemo.swift in Sources */,
 				9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */,
@@ -234,6 +249,7 @@
 				9F19E9702BA5722C0059D8A1 /* SwiftUIDemoApp.swift in Sources */,
 				9F19E9812BA5733A0059D8A1 /* ButtonDemo.swift in Sources */,
 				9F19E98D2BA575390059D8A1 /* ImageViewDemo.swift in Sources */,
+				9F85A9072C16BF8000097B06 /* Countries.swift in Sources */,
 				9F19E9852BA573F60059D8A1 /* FormDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
