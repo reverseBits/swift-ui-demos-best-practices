@@ -11,6 +11,8 @@ struct Login: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isPasswordVisible = false
+    @State private var isLoggedIn = false
+    @State private var showAlert: Bool = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -110,7 +112,11 @@ struct Login: View {
                         .padding(.top, 22)
                         
                         Button("Login") {
-                            print("Button Tapped!")
+                            if (email == "vidhi@gmail.com" && password == "123456") {
+                                isLoggedIn = true
+                            } else {
+                               showAlert = true
+                            }
                         }
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -119,6 +125,12 @@ struct Login: View {
                         .background(Color(red: 1/255, green: 131/255, blue: 80/255))
                         .cornerRadius(6)
                         .padding(.top, 50)
+                        
+                        .alert("Login Failed", isPresented: $showAlert) {
+                            Button("OK", role: .cancel) {}
+                        } message: {
+                            Text("Email or Password is invalid.")
+                        }
                         
                         HStack{
                             Text("Don’t have an account?")

@@ -31,6 +31,10 @@
 		9F2C48BF2C01FFED0060F198 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */; };
 		9F678F1E2BCA782700F68D36 /* DatePickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */; };
 		9F678F222BCA7C7F00F68D36 /* WebViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */; };
+		9F6E5C452C2157EA0043671D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E5C442C2157EA0043671D /* Roboto-Regular.ttf */; };
+		9F6E5C472C2157F90043671D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E5C462C2157F90043671D /* Roboto-Medium.ttf */; };
+		9F6E5C492C2158020043671D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E5C482C2158020043671D /* Roboto-Bold.ttf */; };
+		9F6E5C4C2C2161B20043671D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E5C4B2C2161B20043671D /* Colors.xcassets */; };
 		9F85A9042C16BF2A00097B06 /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */; };
 		9F85A9072C16BF8000097B06 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85A9062C16BF8000097B06 /* Countries.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,11 @@
 		9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemo.swift; sourceTree = "<group>"; };
 		9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemo.swift; sourceTree = "<group>"; };
+		9F6E5C442C2157EA0043671D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		9F6E5C462C2157F90043671D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		9F6E5C482C2158020043671D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		9F6E5C4A2C2158F90043671D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9F6E5C4B2C2161B20043671D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
 		9F85A9062C16BF8000097B06 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,9 +104,10 @@
 		9F19E96E2BA5722C0059D8A1 /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9F6E5C4A2C2158F90043671D /* Info.plist */,
 				9F19E96F2BA5722C0059D8A1 /* SwiftUIDemoApp.swift */,
 				9F19E9712BA5722C0059D8A1 /* ContentView.swift */,
-				9F19E9732BA5722D0059D8A1 /* Assets.xcassets */,
+				9F6E5C4D2C2161BA0043671D /* Resources */,
 				9F19E97D2BA573110059D8A1 /* UIcomponents */,
 				9F2C48B92C01C0550060F198 /* Navigation */,
 				9F19E9752BA5722D0059D8A1 /* Preview Content */,
@@ -147,6 +157,26 @@
 				9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		9F6E5C432C21579B0043671D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E5C442C2157EA0043671D /* Roboto-Regular.ttf */,
+				9F6E5C462C2157F90043671D /* Roboto-Medium.ttf */,
+				9F6E5C482C2158020043671D /* Roboto-Bold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		9F6E5C4D2C2161BA0043671D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E5C432C21579B0043671D /* fonts */,
+				9F19E9732BA5722D0059D8A1 /* Assets.xcassets */,
+				9F6E5C4B2C2161B20043671D /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9F85A9052C16BF6A00097B06 /* Models */ = {
@@ -215,6 +245,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6E5C472C2157F90043671D /* Roboto-Medium.ttf in Resources */,
+				9F6E5C452C2157EA0043671D /* Roboto-Regular.ttf in Resources */,
+				9F6E5C492C2158020043671D /* Roboto-Bold.ttf in Resources */,
+				9F6E5C4C2C2161B20043671D /* Colors.xcassets in Resources */,
 				9F19E9772BA5722D0059D8A1 /* Preview Assets.xcassets in Resources */,
 				9F19E9742BA5722D0059D8A1 /* Assets.xcassets in Resources */,
 			);
@@ -387,6 +421,7 @@
 				DEVELOPMENT_TEAM = 578PBZ9XN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -416,6 +451,7 @@
 				DEVELOPMENT_TEAM = 578PBZ9XN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
