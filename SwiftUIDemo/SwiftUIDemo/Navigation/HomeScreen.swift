@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
+    @State var coupon: String = ""
+    var quotations: [Quotation] = Quotation.quotationDetails()
+    var services: [AddOnService] = AddOnService.addOnServiceDetails()
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .topLeading) {
@@ -109,7 +114,7 @@ struct HomeScreen: View {
                     
                     ZStack() {
                         Rectangle()
-                            .frame(height: 150)
+                            .frame(maxHeight: .infinity)
                             .foregroundStyle(.white)
                             .cornerRadius(3.0)
                             .shadow(radius: 0.8)
@@ -127,7 +132,7 @@ struct HomeScreen: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 15, height: 15)
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, 14)
                             
                             Rectangle()
                                 .frame(height: 1)
@@ -190,11 +195,13 @@ struct HomeScreen: View {
                             .padding(.horizontal, 18)
                         }
                         .padding(.horizontal)
+                        .padding(.top, 12)
+                        .padding(.bottom, 12)
                     }
                     
                     ZStack() {
                         Rectangle()
-                            .frame(height: 320)
+                            .frame(height: 310)
                             .foregroundStyle(.white)
                             .cornerRadius(3.0)
                             .shadow(radius: 0.8)
@@ -217,71 +224,21 @@ struct HomeScreen: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 15, height: 15)
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, 14)
+                            .padding(.top, 10)
                             
                             Rectangle()
                                 .frame(height: 1)
                                 .foregroundStyle(.lightGray)
                             
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("Freight Charge")
-                                        .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
-                                    Spacer()
-                                    Text("₹4,000")
-                                        .font(.custom("Roboto-Regular", size: 14))
-                                        .foregroundColor(Color("blackColor"))
-                                        .bold()
+                            VStack {
+                                List(quotations, id: \.id) { quotation in
+                                    QuotationCell(quotation: quotation)
+                                        .listRowSeparator(.hidden)
+                                        .listRowInsets(.init()) // To remove extra space from rows but this doe not remove top-bottom space
                                 }
-                                .padding(.horizontal, 18)
-                                
-                                HStack {
-                                    Text("Origin Charge")
-                                        .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
-                                    Spacer()
-                                    Text("₹4,000")
-                                        .font(.custom("Roboto-Regular", size: 14))
-                                        .foregroundColor(Color("blackColor"))
-                                        .bold()
-                                }
-                                .padding(.horizontal, 18)
-                                
-                                HStack {
-                                    Text("Custom Clearance")
-                                        .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
-                                    Spacer()
-                                    Text("₹4,000")
-                                        .font(.custom("Roboto-Regular", size: 14))
-                                        .foregroundColor(Color("blackColor"))
-                                        .bold()
-                                }
-                                .padding(.horizontal, 18)
-                                
-                                HStack {
-                                    Text("Transportation Charge")
-                                        .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
-                                    Spacer()
-                                    Text("₹4,000")
-                                        .font(.custom("Roboto-Regular", size: 14))
-                                        .foregroundColor(Color("blackColor"))
-                                        .bold()
-                                }
-                                .padding(.horizontal, 18)
-                                
-                                HStack {
-                                    Text("Additional Service’s Cost")
-                                        .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
-                                    Spacer()
-                                    Text("₹4,000")
-                                        .font(.custom("Roboto-Regular", size: 14))
-                                        .foregroundColor(Color("blackColor"))
-                                        .bold()
-                                }
+                                .listStyle(.plain)
+                                .environment(\.defaultMinListRowHeight, 25) // Remove extra top-bottom space from list
                                 .padding(.horizontal, 18)
                                 
                                 Rectangle()
@@ -324,7 +281,7 @@ struct HomeScreen: View {
                     
                     ZStack() {
                         Rectangle()
-                            .frame(height: 100)
+                            .frame(maxHeight: .infinity)
                             .foregroundStyle(.white)
                             .cornerRadius(3.0)
                             .shadow(radius: 0.8)
@@ -341,7 +298,8 @@ struct HomeScreen: View {
                                     .font(.custom("Roboto-Regular", size: 12))
                                     .foregroundColor(Color("blueTextColor"))
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, 14)
+                            .padding(.top, 12)
                             
                             Rectangle()
                                 .frame(height: 1)
@@ -369,6 +327,7 @@ struct HomeScreen: View {
                                     Spacer()
                                 }
                                 .padding(.leading, 18)
+                                .padding(.bottom, 12)
                             }
                         }
                         .padding(.horizontal)
@@ -376,7 +335,7 @@ struct HomeScreen: View {
                         
                     ZStack() {
                         Rectangle()
-                            .frame(height: 100)
+                            .frame(height: 150)
                             .foregroundStyle(.white)
                             .cornerRadius(3.0)
                             .shadow(radius: 0.8)
@@ -393,15 +352,255 @@ struct HomeScreen: View {
                                     .font(.custom("Roboto-Regular", size: 12))
                                     .foregroundColor(Color("blueTextColor"))
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, 14)
+                            .padding(.top, 10)
                             
                             Rectangle()
                                 .frame(height: 1)
                                 .foregroundStyle(.lightGray)
                             
-                        
+                            List(services, id: \.id) { service in
+                                AddOnServiceCell(service: service)
+                                    .listRowSeparator(.hidden)
+                                    .listRowInsets(.init())
+                            }
+                            .listStyle(.plain)
+                            .padding(.horizontal, 14)
                         }
-                        .padding(.horizontal)
+                        .padding(.horizontal, 18)
+                    }
+                    
+                    ZStack {
+                        Rectangle()
+                            .frame(maxHeight: .infinity)
+                            .foregroundStyle(.white)
+                            .cornerRadius(3.0)
+                            .shadow(radius: 0.8)
+                            .padding(.horizontal, 14)
+                        
+                        HStack(alignment: .top) {
+                            Image("banana")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 57)
+                                .cornerRadius(3)
+                            
+                            VStack(alignment: .leading, spacing: 7) {
+                                Text("Banana")
+                                    .font(.custom("Roboto-Regular", size: 18))
+                                    .foregroundColor(Color("blackColor"))
+                                    .bold()
+                                
+                                Rectangle()
+                                    .frame(height: 1)
+                                    .foregroundStyle(.lightGray)
+                                
+                                HStack {
+                                    Text("1° C")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color("citrusGreen"))
+                                    Text("|")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color(.secondaryLabel))
+                                    Text("29 MT")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color("citrusGreen"))
+                                    Text("|")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color(.secondaryLabel))
+                                    Text("65.0%")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color("citrusGreen"))
+                                    Text("|")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color(.secondaryLabel))
+                                    Text("15.0")
+                                        .font(.custom("Roboto-Regular", size: 12))
+                                        .foregroundColor(Color("citrusGreen"))
+                                }
+                            }
+                            Spacer()
+                            Image("edit")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 18)
+                        }
+                        .padding(.horizontal, 28)
+                        .padding(.top, 12)
+                        .padding(.bottom, 12)
+                    }
+                    
+                    ZStack {
+                        Rectangle()
+                            .frame(maxHeight: .infinity)
+                            .foregroundStyle(.white)
+                            .cornerRadius(3.0)
+                            .shadow(radius: 0.8)
+                            .padding(.horizontal, 14)
+                        
+                        VStack(spacing: 7) {
+                            HStack(alignment: .center) {
+                                Text("Offers & Coupon Codes")
+                                    .font(.custom("Roboto-Regular", size: 15))
+                                    .foregroundColor(Color("blackColor"))
+                                    .bold()
+                                Spacer()
+                                Image("arrow_forward_ios")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 15, height: 15)
+                            }
+                            .padding(.horizontal, 14)
+                            .padding(.top, 12)
+                            
+                            Rectangle()
+                                .frame(height: 1)
+                                .foregroundStyle(.lightGray)
+                            
+                            HStack {
+                                VStack {
+                                    TextField("Enter Coupon code", text: $coupon)
+                                        .textFieldStyle(.plain)
+                                    Rectangle()
+                                        .frame(height: 1)
+                                        .foregroundStyle(Color("grayColor"))
+                                }
+                                
+                                Button("APPLY") {
+                                    print("Button tapped")
+                                }
+                                .font(.custom("Roboto-Regular", size: 12))
+                                .foregroundStyle(Color("citrusGreen"))
+                                .padding(.leading, 10)
+                            }
+                            .padding(.top, 10)
+                            .padding(.horizontal, 14)
+                            
+                            HStack {
+                                Image("offer")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 28)
+                                
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("ZEROFEE")
+                                        .font(.custom("Roboto-Regular", size: 14))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(Color("blackColor"))
+                                    
+                                    Text("Don’t pay any booking fee using this coupon")
+                                        .lineLimit(2)
+                                        .font(.custom("Roboto-Regular", size: 10))
+                                        .foregroundStyle(.secondary)
+                                }
+                                
+                                Spacer()
+                                Button("APPLY") {
+                                    print("Button tapped")
+                                }
+                                .font(.custom("Roboto-Regular", size: 12))
+                                .foregroundStyle(Color("citrusGreen"))
+                            }
+                            .padding(.horizontal, 14)
+                            .padding(.bottom, 12)
+                            .padding(.top, 10)
+                        }
+                        .padding(.horizontal, 14)
+                    }
+                    
+                    ZStack {
+                        Rectangle()
+                            .frame(maxHeight: .infinity)
+                            .foregroundStyle(.white)
+                            .cornerRadius(3.0)
+                            .shadow(radius: 0.8)
+                            .padding(.horizontal, 14)
+                        
+                        VStack(alignment: .leading, spacing: 7) {
+                            HStack(alignment: .center) {
+                                Text("Cancellation Policy")
+                                    .font(.custom("Roboto-Regular", size: 15))
+                                    .foregroundColor(Color("blackColor"))
+                                    .bold()
+                                Spacer()
+                                Image("arrow_forward_ios")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 15, height: 15)
+                            }
+                            .padding(.top, 12)
+                            
+                            Rectangle()
+                                .frame(height: 1)
+                                .foregroundStyle(.lightGray)
+                            
+                            HStack(alignment: .top) {
+                                Image("timer")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 24)
+                                
+                                Text("Booking cancellation fee of $25/container will be applicable if the booking is cancelled.")
+                                    .font(.custom("Roboto-Regular", size: 12))
+                                    .foregroundStyle(Color("grayColor"))
+                            }
+                            .padding(.horizontal, 12)
+                            
+                            Text("Check  commodity , POL, POD and other details before booking.")
+                                .font(.custom("Roboto-Regular", size: 13))
+                                .foregroundStyle(Color("citrusGreen"))
+                                .lineLimit(2)
+                                .padding(.horizontal, 14)
+                                .padding(.top, 10)
+                            
+                            VStack {
+                                Text("Read Terms & Conditions")
+                                    .font(.custom("Roboto-Regular", size: 10))
+                                    .foregroundStyle(Color("blueDottedColor"))
+                                    .padding(.leading, 14)
+                                
+                                Rectangle()
+                                    .strokeBorder(style: StrokeStyle(lineWidth: 4, dash: [10]))
+                                    .frame(height: 1)
+                                    .foregroundStyle(Color("blueDottedColor"))
+                            }
+                            .padding(.bottom, 12)
+                            
+                        }
+                        .padding(.horizontal, 14)
+                    }
+                    
+                    ZStack {
+                        Rectangle()
+                            .frame(maxHeight: .infinity)
+                            .foregroundStyle(.white)
+                            .cornerRadius(3.0)
+                            .shadow(radius: 0.8)
+                            .padding(.horizontal, 14)
+                        
+                        VStack(alignment: .leading, spacing: 7) {
+                            HStack(alignment: .center) {
+                                Text("FAQ’s")
+                                    .font(.custom("Roboto-Regular", size: 15))
+                                    .foregroundColor(Color("blackColor"))
+                                    .bold()
+                                Spacer()
+                                Image("arrow_forward_ios")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 15, height: 15)
+                            }
+                            .padding(.horizontal, 14)
+                            
+                            Rectangle()
+                                .frame(height: 1)
+                                .foregroundStyle(.lightGray)
+                            
+                            VStack {
+                                Text(
+                            }
+                        }
+                        .padding(.horizontal, 14)
                     }
                 }
             }
@@ -409,6 +608,63 @@ struct HomeScreen: View {
         .ignoresSafeArea()
     }
 }
+
+struct AddOnServiceCell: View {
+    
+    var service: AddOnService
+    var body: some View {
+        HStack(alignment: .center) {
+            Image(service.image)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 28)
+                .cornerRadius(3)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(service.serviceName)
+                    .font(.custom("Roboto-Regular", size: 12))
+                    .foregroundStyle(Color("blackColor"))
+                
+                Text(service.serviceDetails)
+                    .font(.custom("Roboto-Regular", size: 10))
+                    .foregroundStyle(Color(.secondaryLabel))
+                
+            }
+            Spacer()
+            Button(action: {
+                print("Button Tapped!")
+            }) {
+                Text("Add")
+                    .font(.custom("Roboto-Regular", size: 12))
+                    .foregroundStyle(Color("citrusGreen"))
+            }
+            .padding()
+            .frame(width: 80, height: 25)
+            .background(
+                RoundedRectangle(cornerRadius: 6)
+                    .stroke(Color("citrusGreen"), lineWidth: 1)
+            )
+        }
+    }
+}
+
+struct QuotationCell: View {
+    
+    var quotation: Quotation
+    var body: some View {
+        HStack {
+            Text(quotation.name)
+                .font(.custom("Roboto-Regular", size: 12))
+                .foregroundColor(Color("blackColor"))
+            Spacer()
+            Text(quotation.charge)
+                .font(.custom("Roboto-Regular", size: 14))
+                .foregroundColor(Color("blackColor"))
+                .bold()
+        }
+    }
+}
+
 
 #Preview {
     HomeScreen()

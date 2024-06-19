@@ -16,9 +16,11 @@ struct VideoListDemo: View {
             List(videos, id: \.id) { video in
                 NavigationLink(destination: VideoDetailsView(video: video)) {
                    VideoCell(video: video)
+                        .listRowSeparator(.visible)
                 }
                 .navigationTitle("SwiftUI's Top 10 ")
             }
+            .listStyle(.plain)
         }
     }
 }
@@ -38,6 +40,7 @@ struct VideoCell: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text(video.title)
                     .fontWeight(.semibold)
+                    .font(.subheadline)
                     .lineLimit(2)
                 
                 Text(video.uploadDate)

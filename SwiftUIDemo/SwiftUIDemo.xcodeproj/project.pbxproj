@@ -40,6 +40,8 @@
 		9FCDC42B2C229F5C0087EDD0 /* VideoListDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC42A2C229F5C0087EDD0 /* VideoListDemo.swift */; };
 		9FCDC42D2C22A14F0087EDD0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC42C2C22A14F0087EDD0 /* Video.swift */; };
 		9FCDC42F2C22A5FC0087EDD0 /* VideoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC42E2C22A5FC0087EDD0 /* VideoDetailsView.swift */; };
+		9FCDC4312C22AF8A0087EDD0 /* AddOnService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC4302C22AF8A0087EDD0 /* AddOnService.swift */; };
+		9FCDC4332C22B9270087EDD0 /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC4322C22B9270087EDD0 /* Quotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		9FCDC42A2C229F5C0087EDD0 /* VideoListDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListDemo.swift; sourceTree = "<group>"; };
 		9FCDC42C2C22A14F0087EDD0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9FCDC42E2C22A5FC0087EDD0 /* VideoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsView.swift; sourceTree = "<group>"; };
+		9FCDC4302C22AF8A0087EDD0 /* AddOnService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnService.swift; sourceTree = "<group>"; };
+		9FCDC4322C22B9270087EDD0 /* Quotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				9F85A9062C16BF8000097B06 /* Countries.swift */,
+				9FCDC4322C22B9270087EDD0 /* Quotation.swift */,
+				9FCDC4302C22AF8A0087EDD0 /* AddOnService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,9 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2C48BB2C01C1190060F198 /* Login.swift in Sources */,
+				9FCDC4332C22B9270087EDD0 /* Quotation.swift in Sources */,
 				9F85A9042C16BF2A00097B06 /* NavigationDemo.swift in Sources */,
 				9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */,
 				9F19E9972BA576650059D8A1 /* HorizontalScrollViewDemo.swift in Sources */,
+				9FCDC4312C22AF8A0087EDD0 /* AddOnService.swift in Sources */,
 				9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */,
 				9F2C48BF2C01FFED0060F198 /* HomeScreen.swift in Sources */,
 				9FCDC42F2C22A5FC0087EDD0 /* VideoDetailsView.swift in Sources */,
