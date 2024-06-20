@@ -13,12 +13,17 @@ struct HomeScreen: View {
     var quotations: [Quotation] = Quotation.quotationDetails()
     var services: [AddOnService] = AddOnService.addOnServiceDetails()
     
+    init() {
+        UIScrollView.appearance().bounces = false
+    }
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .topLeading) {
                 Image("home_bg")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.trailing, -2)
                 
                 VStack {
                     Text("IN NSA to AE JEA")
@@ -75,7 +80,7 @@ struct HomeScreen: View {
                                 Text("ETD")
                                     .font(.caption2)
                                     .foregroundStyle(.white)
-                                    
+                                
                             }
                             
                             VStack(alignment: .leading, spacing: 3) {
@@ -85,7 +90,7 @@ struct HomeScreen: View {
                                 Text("ETA")
                                     .font(.caption2)
                                     .foregroundStyle(.white)
-                                    
+                                
                             }
                         }
                     }
@@ -99,7 +104,10 @@ struct HomeScreen: View {
                     }) {
                         HStack {
                             Text("Add Transportation & Customs Clearance")
+                                .font(.custom("Roboto-Regular", size: 13))
+                                .bold()
                             Image(systemName: "plus")
+                                .bold()
                         }
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -113,12 +121,7 @@ struct HomeScreen: View {
                     .padding(.top, 300)
                     
                     ZStack() {
-                        Rectangle()
-                            .frame(maxHeight: .infinity)
-                            .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
-                            .padding(.horizontal, 14)
+                        RectangleWithCorners()
                         
                         VStack(spacing: 7) {
                             HStack(alignment: .center) {
@@ -203,8 +206,8 @@ struct HomeScreen: View {
                         Rectangle()
                             .frame(height: 310)
                             .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
+                            .cornerRadius(6.0)
+                            .shadow(radius: 1)
                             .padding(.horizontal, 14)
                         
                         VStack(spacing: 10) {
@@ -240,6 +243,8 @@ struct HomeScreen: View {
                                 .listStyle(.plain)
                                 .environment(\.defaultMinListRowHeight, 25) // Remove extra top-bottom space from list
                                 .padding(.horizontal, 18)
+                                .scrollIndicators(.hidden)
+                                .scrollDisabled(true)
                                 
                                 Rectangle()
                                     .frame(height: 1)
@@ -280,12 +285,7 @@ struct HomeScreen: View {
                     }
                     
                     ZStack() {
-                        Rectangle()
-                            .frame(maxHeight: .infinity)
-                            .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
-                            .padding(.horizontal, 14)
+                        RectangleWithCorners()
                         
                         VStack(spacing: 10) {
                             HStack(alignment: .center) {
@@ -332,13 +332,13 @@ struct HomeScreen: View {
                         }
                         .padding(.horizontal)
                     }
-                        
+                    
                     ZStack() {
                         Rectangle()
                             .frame(height: 150)
                             .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
+                            .cornerRadius(6.0)
+                            .shadow(radius: 1)
                             .padding(.horizontal, 14)
                         
                         VStack(spacing: 10) {
@@ -371,12 +371,7 @@ struct HomeScreen: View {
                     }
                     
                     ZStack {
-                        Rectangle()
-                            .frame(maxHeight: .infinity)
-                            .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
-                            .padding(.horizontal, 14)
+                        RectangleWithCorners()
                         
                         HStack(alignment: .top) {
                             Image("banana")
@@ -431,12 +426,7 @@ struct HomeScreen: View {
                     }
                     
                     ZStack {
-                        Rectangle()
-                            .frame(maxHeight: .infinity)
-                            .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
-                            .padding(.horizontal, 14)
+                        RectangleWithCorners()
                         
                         VStack(spacing: 7) {
                             HStack(alignment: .center) {
@@ -509,12 +499,7 @@ struct HomeScreen: View {
                     }
                     
                     ZStack {
-                        Rectangle()
-                            .frame(maxHeight: .infinity)
-                            .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
-                            .padding(.horizontal, 14)
+                        RectangleWithCorners()
                         
                         VStack(alignment: .leading, spacing: 7) {
                             HStack(alignment: .center) {
@@ -528,7 +513,7 @@ struct HomeScreen: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 15, height: 15)
                             }
-                            .padding(.top, 12)
+                            .padding(.horizontal, 14)
                             
                             Rectangle()
                                 .frame(height: 1)
@@ -543,40 +528,44 @@ struct HomeScreen: View {
                                 Text("Booking cancellation fee of $25/container will be applicable if the booking is cancelled.")
                                     .font(.custom("Roboto-Regular", size: 12))
                                     .foregroundStyle(Color("grayColor"))
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
-                            .padding(.horizontal, 12)
+                            .padding(.horizontal, 14)
                             
                             Text("Check  commodity , POL, POD and other details before booking.")
                                 .font(.custom("Roboto-Regular", size: 13))
                                 .foregroundStyle(Color("citrusGreen"))
-                                .lineLimit(2)
+                                .fixedSize(horizontal: false, vertical: true) // It will set text to grow vertically
                                 .padding(.horizontal, 14)
                                 .padding(.top, 10)
                             
-                            VStack {
+                            VStack(alignment: .leading) {
                                 Text("Read Terms & Conditions")
                                     .font(.custom("Roboto-Regular", size: 10))
-                                    .foregroundStyle(Color("blueDottedColor"))
-                                    .padding(.leading, 14)
-                                
-                                Rectangle()
-                                    .strokeBorder(style: StrokeStyle(lineWidth: 4, dash: [10]))
-                                    .frame(height: 1)
-                                    .foregroundStyle(Color("blueDottedColor"))
+                                    .foregroundColor(Color("blueDottedColor"))
+                                    .background(
+                                        GeometryReader { geometry in
+                                            Path { path in
+                                                let width = geometry.size.width
+                                                path.move(to: CGPoint(x: 0, y: 0))
+                                                path.addLine(to: CGPoint(x: width, y: 0))
+                                            }
+                                            .stroke(style: StrokeStyle(lineWidth: 1, dash: [2, 2]))
+                                            .foregroundColor(Color("blueDottedColor"))
+                                            .frame(height: 1)
+                                            .offset(y: geometry.size.height + 2)
+                                        }
+                                    )
                             }
-                            .padding(.bottom, 12)
-                            
+                            .padding(.top, 11)
+                            .padding(.leading, 14)
                         }
                         .padding(.horizontal, 14)
+                        .padding(.vertical, 12)
                     }
                     
                     ZStack {
-                        Rectangle()
-                            .frame(maxHeight: .infinity)
-                            .foregroundStyle(.white)
-                            .cornerRadius(3.0)
-                            .shadow(radius: 0.8)
-                            .padding(.horizontal, 14)
+                        RectangleWithCorners()
                         
                         VStack(alignment: .leading, spacing: 7) {
                             HStack(alignment: .center) {
@@ -596,16 +585,70 @@ struct HomeScreen: View {
                                 .frame(height: 1)
                                 .foregroundStyle(.lightGray)
                             
-                            VStack {
-                                Text(
+                            VStack(alignment: .leading) {
+                                Text("What are the next steps?")
+                                    .font(.custom("Roboto-Regular", size: 12))
+                                    .foregroundColor(Color("citrusGreen"))
+                                
+                                Rectangle()
+                                    .frame(height: 1)
+                                    .foregroundStyle(.lightGray)
+                                
+                                Text("Customer support appointment.\nPayment for transportation.\nOrder acceptance.")
+                                    .font(.custom("Roboto-Regular", size: 12))
+                                    .foregroundColor(Color(.secondaryLabel))
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
+                            .padding(.horizontal, 14)
+                            .padding(.top, 10)
                         }
                         .padding(.horizontal, 14)
+                        .padding(.vertical, 12)
                     }
                 }
             }
         }
-        .ignoresSafeArea()
+        .ignoresSafeArea(edges: .top)
+        
+        ZStack {
+            Rectangle()
+                .fill(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color(hex: "#038555"), Color(hex: "#0FB477")]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("₹ 5,24,000")
+                        .font(.custom("Roboto-Regular", size: 18))
+                        .foregroundColor(Color(.white))
+                        .bold()
+                    
+                    Text("FOR 2 CONTAINER")
+                        .font(.custom("Roboto-Regular", size: 11))
+                        .foregroundColor(Color(.white))
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    print("Button Tapped!")
+                }) {
+                    Text("PLACE ORDER")
+                        .font(.custom("Roboto-Regular", size: 15))
+                        .foregroundStyle(Color("citrusGreen"))
+                }
+                .frame(width: 149, height: 39)
+                .background(
+                    RoundedRectangle(cornerRadius: 31)
+                        .fill(.white)
+                )
+            }
+            .padding(.horizontal, 21)
+        }
+        .ignoresSafeArea(edges: .bottom)
+        .frame(height: 50)
     }
 }
 
@@ -662,6 +705,18 @@ struct QuotationCell: View {
                 .foregroundColor(Color("blackColor"))
                 .bold()
         }
+    }
+}
+
+struct RectangleWithCorners: View {
+    
+    var body: some View {
+        Rectangle()
+            .frame(maxHeight: .infinity)
+            .foregroundStyle(.white)
+            .cornerRadius(6.0)
+            .shadow(radius: 1)
+            .padding(.horizontal, 14)
     }
 }
 

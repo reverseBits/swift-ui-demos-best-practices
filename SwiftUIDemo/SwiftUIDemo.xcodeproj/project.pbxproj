@@ -27,6 +27,7 @@
 		9F19E99D2BA583DC0059D8A1 /* StepperDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E99C2BA583DC0059D8A1 /* StepperDemo.swift */; };
 		9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */; };
 		9F19E9A12BA588B50059D8A1 /* ColorPickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19E9A02BA588B50059D8A1 /* ColorPickerDemo.swift */; };
+		9F29725F2C23F8A700C7D9C2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29725E2C23F8A700C7D9C2 /* UIColor+Extension.swift */; };
 		9F2C48BB2C01C1190060F198 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C48BA2C01C1190060F198 /* Login.swift */; };
 		9F2C48BF2C01FFED0060F198 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */; };
 		9F678F1E2BCA782700F68D36 /* DatePickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */; };
@@ -66,6 +67,7 @@
 		9F19E99C2BA583DC0059D8A1 /* StepperDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperDemo.swift; sourceTree = "<group>"; };
 		9F19E99E2BA586590059D8A1 /* TextEditorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorDemo.swift; sourceTree = "<group>"; };
 		9F19E9A02BA588B50059D8A1 /* ColorPickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDemo.swift; sourceTree = "<group>"; };
+		9F29725E2C23F8A700C7D9C2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9F2C48BA2C01C1190060F198 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9F2C48BE2C01FFED0060F198 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		9F678F1D2BCA782700F68D36 /* DatePickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDemo.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				9F6E5C4A2C2158F90043671D /* Info.plist */,
 				9F19E96F2BA5722C0059D8A1 /* SwiftUIDemoApp.swift */,
 				9F19E9712BA5722C0059D8A1 /* ContentView.swift */,
+				9F29725D2C23F88E00C7D9C2 /* Extension */,
 				9F6E5C4D2C2161BA0043671D /* Resources */,
 				9F19E97D2BA573110059D8A1 /* UIcomponents */,
 				9F2C48B92C01C0550060F198 /* Navigation */,
@@ -157,6 +160,14 @@
 				9FCDC4292C229F2E0087EDD0 /* ListDemo */,
 			);
 			path = UIcomponents;
+			sourceTree = "<group>";
+		};
+		9F29725D2C23F88E00C7D9C2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9F29725E2C23F8A700C7D9C2 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9F2C48B92C01C0550060F198 /* Navigation */ = {
@@ -293,6 +304,7 @@
 				9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */,
 				9F2C48BF2C01FFED0060F198 /* HomeScreen.swift in Sources */,
 				9FCDC42F2C22A5FC0087EDD0 /* VideoDetailsView.swift in Sources */,
+				9F29725F2C23F8A700C7D9C2 /* UIColor+Extension.swift in Sources */,
 				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
 				9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */,
 				9F19E99D2BA583DC0059D8A1 /* StepperDemo.swift in Sources */,
