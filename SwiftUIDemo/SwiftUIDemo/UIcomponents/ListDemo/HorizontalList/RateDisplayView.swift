@@ -8,48 +8,55 @@
 import SwiftUI
 
 struct RateDisplayView: View {
-    var body: some View {
-        TopView(title: "IN NSA to AE JEA")
         
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Upcoming Vessels")
-                .font(.custom("Roboto-Regular", size: 16))
-                .foregroundStyle(Color("blackColor"))
-                .bold()
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(1...8, id: \.self) {_ in
-                        VesselCell()
-                    }
-                }
-                .listRowInsets(.init())
-            }
-            .padding(.top, 10)
-            
-            HStack {
-                Image("onion")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 36)
+    var body: some View {
+        NavigationStack {
+            TopView(title: "IN NSA to AE JEA", onBackTap: {
                 
-                Text("Freights For Onion ")
+            })
+            
+            VStack(alignment: .leading) {
+                Text("Upcoming Vessels")
                     .font(.custom("Roboto-Regular", size: 16))
                     .foregroundStyle(Color("blackColor"))
                     .bold()
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(1...8, id: \.self) {_ in
+                            VesselCell()
+                        }
+                    }
+                    .listRowInsets(.init())
+                }
+                .padding(.top, 10)
+                
+                HStack {
+                    Image("onion")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 36)
+                    
+                    Text("Freights For Onion ")
+                        .font(.custom("Roboto-Regular", size: 16))
+                        .foregroundStyle(Color("blackColor"))
+                        .bold()
+                }
+                .padding(.top, 15)
+                
+                List(0..<10, id: \.self) {_ in
+                    FrightCell()
+                        .listRowInsets(.init(top: 5, leading: 5, bottom: 5, trailing: 5))
+                        .listRowSeparator(.hidden)
+                        .padding(.top, 10)
+                }
+                .listStyle(.plain)
+                .scrollIndicators(.hidden)
             }
+            .padding(.horizontal, 15)
             .padding(.top, 15)
-            
-            List(0..<10, id: \.self) {_ in 
-                FrightCell()
-                    .listRowInsets(.init(top: 5, leading: 5, bottom: 5, trailing: 5))
-                    .listRowSeparator(.hidden)
-                    .padding(.top, 10)
-            }
-            .listStyle(.plain)
-            .scrollIndicators(.hidden)            
+            .navigationBarBackButtonHidden(true)
         }
-        .padding(.horizontal, 15)
     }
 }
 
@@ -76,8 +83,10 @@ struct VesselCell: View {
 }
 
 struct FrightCell: View {
+    
+    @State var isNavigate: Bool = false
+    
     var body: some View {
-               
         VStack {
             HStack {
                 Image("navio")
@@ -151,7 +160,7 @@ struct FrightCell: View {
                 Spacer()
                 
                 Button("Check Full Quote") {
-                    print("button tapped!")
+                    isNavigate = true
                 }
                 .padding(.horizontal, 18)
                 .padding(.vertical, 8)
@@ -161,6 +170,12 @@ struct FrightCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .fill(Color(hex: "018353"))
                 )
+                
+                NavigationLink(destination: HomeScreen(), isActive: $isNavigate) {
+                    EmptyView()
+                }
+                .frame(width: 0, height: 0)
+                .hidden()
             }
             .padding(.top, 10)
         }

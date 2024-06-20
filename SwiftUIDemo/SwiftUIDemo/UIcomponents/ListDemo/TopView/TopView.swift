@@ -10,6 +10,7 @@ import SwiftUI
 struct TopView: View {
     
     var title: String
+    var onBackTap: () -> Void
     
     var body: some View {
         ZStack {
@@ -19,13 +20,16 @@ struct TopView: View {
                                                       topTrailing: 0.0))
             .frame(maxHeight: 70)
             .foregroundStyle(.white)
-            .shadow(radius: 1, x: 0, y: 3)
+            .shadow(radius: 1, x: 0, y: 2)
             
             HStack {
                 Image("back_iOS")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 20)
+                    .onTapGesture {
+                        onBackTap()
+                    }
                 
                 Text(title)
                     .font(.custom("Roboto-Regular", size: 16))
@@ -46,5 +50,7 @@ struct TopView: View {
 }
 
 #Preview {
-    TopView(title: "IN NSA to AE JEA")
+    TopView(title: "IN NSA to AE JEA", onBackTap: {
+        print("Back pressed.")
+    })
 }

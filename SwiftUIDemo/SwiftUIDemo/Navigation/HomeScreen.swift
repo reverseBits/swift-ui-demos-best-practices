@@ -649,6 +649,7 @@ struct HomeScreen: View {
         }
         .ignoresSafeArea(edges: .bottom)
         .frame(height: 50)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
