@@ -127,9 +127,9 @@ struct Login: View {
                             .cornerRadius(6)
                             .padding(.top, 50)
                             
-                            NavigationLink(destination: RateDisplayView(), isActive: $isLoggedIn) {
-                                EmptyView()
-                            }
+                            .navigationDestination(isPresented: $isLoggedIn, destination: {
+                                RateDisplayView()
+                            })
                             
                             .alert("Login Failed", isPresented: $showAlert) {
                                 Button("OK", role: .cancel) {}

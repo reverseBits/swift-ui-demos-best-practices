@@ -170,7 +170,7 @@ struct FrightCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .fill(Color(hex: "018353"))
                 )
-                
+            
                 NavigationLink(destination: HomeScreen(), isActive: $isNavigate) {
                     EmptyView()
                 }
