@@ -26,3 +26,37 @@ https://developer.apple.com/documentation/swiftui/navigationpath
 https://levelup.gitconnected.com/using-a-navigationstack-with-mvvm-and-swiftui-36617c9f9147
 https://betterprogramming.pub/flow-navigation-with-swiftui-4-e006882c5efa
 
+
+List
+https://developer.apple.com/documentation/swiftui/list
+
+Vertical List with Navigation: (VideoListView)
+A container that presents rows of data arranged in a single column, optionally providing the ability to select one or more members.
+
+@MainActor @preconcurrency
+struct List<SelectionValue, Content> where SelectionValue : Hashable, Content : View
+
+Example:
+var body: some View {
+    List {
+        Text("A List Item")
+        Text("A Second List Item")
+        Text("A Third List Item")
+    }
+}
+
+
+
+Vertical and Horizontal List: (RateDisplayView)
+We can create HorizontalList by using ScrollView and HStack
+
+Example:
+ScrollView(.horizontal, showsIndicators: false) {
+    HStack(spacing: 8) {
+        ForEach(1...8, id: \.self) {_ in
+            VesselCell()
+        }
+    }
+    .listRowInsets(.init())
+}
+.padding(.top, 10)
