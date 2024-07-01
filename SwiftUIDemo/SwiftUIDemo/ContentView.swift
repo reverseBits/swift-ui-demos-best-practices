@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var navigationPath = NavigationPath()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $navigationPath) {
+            Login(navigationPath: $navigationPath)
+                .navigationDestination(for: Screens.self) { screen in
+                    switch screen {
+                        case .login:
+                            Login(navigationPath: $navigationPath)
+                        case .rateDisplay:
+                            RateDisplayView(navigationPath: $navigationPath)
+                        case .homeScreen:
+                            HomeScreen()
+                    }
+                }
         }
-        .padding()
     }
 }
 
