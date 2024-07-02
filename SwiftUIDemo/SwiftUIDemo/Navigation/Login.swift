@@ -113,7 +113,7 @@ struct Login: View {
                         
                         Button("Login") {
                             if (email == "Vidhi@gmail.com" && password == "123456") {
-                                navigationPath.append(Screens.rateDisplay)
+                                navigationPath.append(CitrusScreens.rateDisplay)
                             } else {
                                 showAlert = true
                             }

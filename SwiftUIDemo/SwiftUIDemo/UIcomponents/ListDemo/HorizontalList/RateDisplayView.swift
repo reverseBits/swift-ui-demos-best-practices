@@ -165,7 +165,7 @@ struct FrightCell: View {
                 Spacer()
                 
                 Button("Check Full Quote") {
-                    navigationPath.append(Screens.homeScreen)
+                    navigationPath.append(CitrusScreens.homeScreen)
                 }
                 .padding(.horizontal, 18)
                 .padding(.vertical, 8)

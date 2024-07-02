@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CitrusView: View {
     
     @State private var navigationPath = NavigationPath()
     
     var body: some View {
         NavigationStack(path: $navigationPath) {
             Login(navigationPath: $navigationPath)
-                .navigationDestination(for: Screens.self) { screen in
+                .navigationDestination(for: CitrusScreens.self) { screen in
                     switch screen {
                         case .login:
                             Login(navigationPath: $navigationPath)
@@ -29,5 +29,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CitrusView()
 }

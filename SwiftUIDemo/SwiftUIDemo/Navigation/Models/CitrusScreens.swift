@@ -7,8 +7,15 @@
 
 import Foundation
 
-enum Screens: Hashable {
+enum CitrusScreens: Hashable {
     case login
     case rateDisplay
     case homeScreen
+}
+
+enum ProductsScreens: Hashable {
+    case electronics
+    case mensClothes
+    case womensClothes
+    case jewellery
 }
