@@ -55,6 +55,9 @@ struct RateDisplayView: View {
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)
+            .refreshable {
+                print("Pull to refresh")
+            }
         }
         .padding(.horizontal, 15)
         .padding(.top, 15)
