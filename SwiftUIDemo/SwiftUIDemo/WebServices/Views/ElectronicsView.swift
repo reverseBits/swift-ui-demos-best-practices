@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ElectronicsView: View {
     
-    @StateObject private var networkManager = APIManager()
+    @ObservedObject private var viewModel = ProductsViewModel()
     
     var body: some View {
         ScrollView {
@@ -18,7 +18,7 @@ struct ElectronicsView: View {
                 .bold()
             
             VStack {
-                ForEach(networkManager.products) { product in
+                ForEach(viewModel.products ?? []) { product in
                     ZStack {
                         Rectangle()
                             .fill()
@@ -53,7 +53,7 @@ struct ElectronicsView: View {
                 }
             }
             .onAppear {
-                networkManager.fetchPosts(endPoint: "electronics")
+                viewModel.getProducts(endPoint: .electronics)
             }
         }
         .scrollIndicators(.hidden)

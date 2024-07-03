@@ -44,7 +44,8 @@
 		9F85A9042C16BF2A00097B06 /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */; };
 		9F85A9072C16BF8000097B06 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85A9062C16BF8000097B06 /* Countries.swift */; };
 		9FA301242C32EFF900A12F90 /* CitrusScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA301232C32EFF900A12F90 /* CitrusScreens.swift */; };
-		9FBBE44D2C33F0730075D68A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBE44C2C33F0730075D68A /* APIManager.swift */; };
+		9FB322EC2C35150A0034C2F5 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB322EB2C35150A0034C2F5 /* ProductsViewModel.swift */; };
+		9FBBE44D2C33F0730075D68A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBE44C2C33F0730075D68A /* NetworkManager.swift */; };
 		9FBBE44F2C3404F30075D68A /* ClothesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBE44E2C3404F30075D68A /* ClothesView.swift */; };
 		9FBBE4512C34054E0075D68A /* WClothesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBE4502C34054E0075D68A /* WClothesView.swift */; };
 		9FBBE4532C34057A0075D68A /* ElectronicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBBE4522C34057A0075D68A /* ElectronicsView.swift */; };
@@ -97,7 +98,8 @@
 		9F85A9032C16BF2A00097B06 /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
 		9F85A9062C16BF8000097B06 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		9FA301232C32EFF900A12F90 /* CitrusScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitrusScreens.swift; sourceTree = "<group>"; };
-		9FBBE44C2C33F0730075D68A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9FB322EB2C35150A0034C2F5 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		9FBBE44C2C33F0730075D68A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9FBBE44E2C3404F30075D68A /* ClothesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesView.swift; sourceTree = "<group>"; };
 		9FBBE4502C34054E0075D68A /* WClothesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WClothesView.swift; sourceTree = "<group>"; };
 		9FBBE4522C34057A0075D68A /* ElectronicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronicsView.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		9F3C40802C33D3C000429B34 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9FB322EB2C35150A0034C2F5 /* ProductsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 		9F3C40812C33D3CB00429B34 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
-				9FBBE44C2C33F0730075D68A /* APIManager.swift */,
+				9FBBE44C2C33F0730075D68A /* NetworkManager.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				9F85A9042C16BF2A00097B06 /* NavigationDemo.swift in Sources */,
 				9F19E99F2BA586590059D8A1 /* TextEditorDemo.swift in Sources */,
 				9F19E9972BA576650059D8A1 /* HorizontalScrollViewDemo.swift in Sources */,
+				9FB322EC2C35150A0034C2F5 /* ProductsViewModel.swift in Sources */,
 				9FCDC4312C22AF8A0087EDD0 /* AddOnService.swift in Sources */,
 				9F19E98F2BA5758B0059D8A1 /* ShapesDemo.swift in Sources */,
 				9F2C48BF2C01FFED0060F198 /* HomeScreen.swift in Sources */,
@@ -480,7 +484,7 @@
 				9FCDC42F2C22A5FC0087EDD0 /* VideoDetailsView.swift in Sources */,
 				9F29725F2C23F8A700C7D9C2 /* UIColor+Extension.swift in Sources */,
 				9F19E9832BA573A20059D8A1 /* TextFieldDemo.swift in Sources */,
-				9FBBE44D2C33F0730075D68A /* APIManager.swift in Sources */,
+				9FBBE44D2C33F0730075D68A /* NetworkManager.swift in Sources */,
 				9F19E9872BA574450059D8A1 /* LabelDemo.swift in Sources */,
 				9F19E99D2BA583DC0059D8A1 /* StepperDemo.swift in Sources */,
 				9F3C40882C33EADC00429B34 /* JewelleryView.swift in Sources */,

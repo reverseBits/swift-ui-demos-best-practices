@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClothesView: View {
     
-    @StateObject private var networkManager = APIManager()
+    @ObservedObject private var viewModel = ProductsViewModel()
     
     var body: some View {
         ScrollView {
@@ -18,7 +18,7 @@ struct ClothesView: View {
                 .bold()
             
             VStack {
-                ForEach(networkManager.products) { product in
+                ForEach(viewModel.products ?? []) { product in
                     ZStack {
                         Rectangle()
                             .fill()
@@ -52,7 +52,7 @@ struct ClothesView: View {
                 }
             }
             .onAppear {
-                networkManager.fetchPosts(endPoint: "men's clothing")
+                viewModel.getProducts(endPoint: .mensClothing)
             }
         }
         .scrollIndicators(.hidden)
