@@ -721,7 +721,6 @@ struct RectangleWithCorners: View {
     }
 }
 
-
 #Preview {
     HomeScreen()
 }

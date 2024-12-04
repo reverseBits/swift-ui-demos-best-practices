@@ -8,55 +8,60 @@
 import SwiftUI
 
 struct RateDisplayView: View {
+    
+    @Binding var navigationPath: NavigationPath
         
     var body: some View {
-        NavigationStack {
-            TopView(title: "IN NSA to AE JEA", onBackTap: {
-                
-            })
+        TopView(title: "IN NSA to AE JEA", onBackTap: {
+            if !navigationPath.isEmpty {
+                navigationPath.removeLast()
+            }
+        })
+        
+        VStack(alignment: .leading) {
+            Text("Upcoming Vessels")
+                .font(.custom("Roboto-Regular", size: 16))
+                .foregroundStyle(Color("blackColor"))
+                .bold()
             
-            VStack(alignment: .leading) {
-                Text("Upcoming Vessels")
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    ForEach(1...8, id: \.self) {_ in
+                        VesselCell()
+                    }
+                }
+                .listRowInsets(.init())
+            }
+            .padding(.top, 10)
+            
+            HStack {
+                Image("onion")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 36)
+                
+                Text("Freights For Onion ")
                     .font(.custom("Roboto-Regular", size: 16))
                     .foregroundStyle(Color("blackColor"))
                     .bold()
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 8) {
-                        ForEach(1...8, id: \.self) {_ in
-                            VesselCell()
-                        }
-                    }
-                    .listRowInsets(.init())
-                }
-                .padding(.top, 10)
-                
-                HStack {
-                    Image("onion")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 36)
-                    
-                    Text("Freights For Onion ")
-                        .font(.custom("Roboto-Regular", size: 16))
-                        .foregroundStyle(Color("blackColor"))
-                        .bold()
-                }
-                .padding(.top, 15)
-                
-                List(0..<10, id: \.self) {_ in
-                    FrightCell()
-                        .listRowInsets(.init(top: 5, leading: 5, bottom: 5, trailing: 5))
-                        .listRowSeparator(.hidden)
-                        .padding(.top, 10)
-                }
-                .listStyle(.plain)
-                .scrollIndicators(.hidden)
             }
-            .padding(.horizontal, 15)
             .padding(.top, 15)
-            .navigationBarBackButtonHidden(true)
+            
+            List(0..<10, id: \.self) {_ in
+                FrightCell(navigationPath: $navigationPath)
+                    .listRowInsets(.init(top: 5, leading: 5, bottom: 5, trailing: 5))
+                    .listRowSeparator(.hidden)
+                    .padding(.top, 10)
+            }
+            .listStyle(.plain)
+            .scrollIndicators(.hidden)
+            .refreshable {
+                print("Pull to refresh")
+            }
         }
+        .padding(.horizontal, 15)
+        .padding(.top, 15)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -84,7 +89,7 @@ struct VesselCell: View {
 
 struct FrightCell: View {
     
-    @State var isNavigate: Bool = false
+    @Binding var navigationPath: NavigationPath
     
     var body: some View {
         VStack {
@@ -160,7 +165,7 @@ struct FrightCell: View {
                 Spacer()
                 
                 Button("Check Full Quote") {
-                    isNavigate = true
+                    navigationPath.append(CitrusScreens.homeScreen)
                 }
                 .padding(.horizontal, 18)
                 .padding(.vertical, 8)
@@ -170,12 +175,6 @@ struct FrightCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .fill(Color(hex: "018353"))
                 )
-            
-                NavigationLink(destination: HomeScreen(), isActive: $isNavigate) {
-                    EmptyView()
-                }
-                .frame(width: 0, height: 0)
-                .hidden()
             }
             .padding(.top, 10)
         }
@@ -190,5 +189,5 @@ struct FrightCell: View {
 }
 
 #Preview {
-    RateDisplayView()
+    RateDisplayView(navigationPath: .constant(NavigationPath()))
 }
