@@ -139,7 +139,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             HStack(alignment: .center) {
                                 HStack(alignment: .center) {
@@ -232,7 +232,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             VStack {
                                 List(quotations, id: \.id) { quotation in
@@ -248,7 +248,7 @@ struct HomeScreen: View {
                                 
                                 Rectangle()
                                     .frame(height: 1)
-                                    .foregroundColor(.lightGray)
+                                    .foregroundColor(.customLightGray)
                                     .padding(.horizontal, 18)
                                 
                                 HStack {
@@ -303,7 +303,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             VStack(alignment: .leading) {
                                 HStack {
@@ -357,7 +357,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             List(services, id: \.id) { service in
                                 AddOnServiceCell(service: service)
@@ -388,7 +388,7 @@ struct HomeScreen: View {
                                 
                                 Rectangle()
                                     .frame(height: 1)
-                                    .foregroundStyle(.lightGray)
+                                    .foregroundStyle(.customLightGray)
                                 
                                 HStack {
                                     Text("1° C")
@@ -445,7 +445,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             HStack {
                                 VStack {
@@ -517,7 +517,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             HStack(alignment: .top) {
                                 Image("timer")
@@ -583,7 +583,7 @@ struct HomeScreen: View {
                             
                             Rectangle()
                                 .frame(height: 1)
-                                .foregroundStyle(.lightGray)
+                                .foregroundStyle(.customLightGray)
                             
                             VStack(alignment: .leading) {
                                 Text("What are the next steps?")
@@ -592,7 +592,7 @@ struct HomeScreen: View {
                                 
                                 Rectangle()
                                     .frame(height: 1)
-                                    .foregroundStyle(.lightGray)
+                                    .foregroundStyle(.customLightGray)
                                 
                                 Text("Customer support appointment.\nPayment for transportation.\nOrder acceptance.")
                                     .font(.custom("Roboto-Regular", size: 12))
