@@ -158,7 +158,7 @@
 				9F19E96F2BA5722C0059D8A1 /* SwiftUIDemoApp.swift */,
 				9F29725D2C23F88E00C7D9C2 /* Extension */,
 				9F6E5C4D2C2161BA0043671D /* Resources */,
-				9F19E97D2BA573110059D8A1 /* UIcomponents */,
+				9F19E97D2BA573110059D8A1 /* UIComponents */,
 				9F2C48B92C01C0550060F198 /* Navigation */,
 				9FF1F01A2C2EFC5F00699147 /* WebServices */,
 				9F19E9752BA5722D0059D8A1 /* Preview Content */,
@@ -174,7 +174,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9F19E97D2BA573110059D8A1 /* UIcomponents */ = {
+		9F19E97D2BA573110059D8A1 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
 				9F19E9802BA5733A0059D8A1 /* ButtonDemo.swift */,
@@ -197,7 +197,7 @@
 				9F678F212BCA7C7F00F68D36 /* WebViewDemo.swift */,
 				9FCDC4292C229F2E0087EDD0 /* ListDemo */,
 			);
-			path = UIcomponents;
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		9F29725D2C23F88E00C7D9C2 /* Extension */ = {
