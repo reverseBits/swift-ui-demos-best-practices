@@ -33,7 +33,7 @@ struct TopView: View {
                 
                 Text(title)
                     .font(.custom("Roboto-Regular", size: 16))
-                    .foregroundStyle(Color("blackColor"))
+                    .foregroundStyle(Color("customBlackColor"))
                     .bold()
                     .padding(.leading, 15)
                 

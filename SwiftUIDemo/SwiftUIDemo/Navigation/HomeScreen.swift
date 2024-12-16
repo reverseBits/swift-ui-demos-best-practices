@@ -127,7 +127,7 @@ struct HomeScreen: View {
                             HStack(alignment: .center) {
                                 Text("Transport & Custom Clearance")
                                     .font(.custom("Roboto-Regular", size: 15))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 Spacer()
                                 Image("arrow_forward_ios")
@@ -149,12 +149,12 @@ struct HomeScreen: View {
                                         .frame(width: 25, height: 25)
                                     Text("Stuffing Location")
                                         .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                 }
                                 Spacer()
                                 Text("Jalgaon - Raver")
                                     .font(.custom("Roboto-Medium", size: 12))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                             }
                             .padding(.horizontal, 18)
                             
@@ -166,16 +166,16 @@ struct HomeScreen: View {
                                         .frame(width: 20, height: 20)
                                     Text("Clearance port")
                                         .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                 }
                                 Spacer()
                                 VStack(alignment: .trailing) {
                                     Text("Nahva Sheva")
                                         .font(.custom("Roboto-Medium", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                     Text("On Wheel")
                                         .font(.custom("Roboto-Medium", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                 }
                             }
                             .padding(.horizontal, 18)
@@ -188,12 +188,12 @@ struct HomeScreen: View {
                                         .frame(width: 22, height: 22)
                                     Text("Stuffing Location")
                                         .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                 }
                                 Spacer()
                                 Text("Surrender")
                                     .font(.custom("Roboto-Medium", size: 12))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                             }
                             .padding(.horizontal, 18)
                         }
@@ -215,11 +215,11 @@ struct HomeScreen: View {
                                 VStack(alignment: .leading, spacing: 3) {
                                     Text("Quotation")
                                         .font(.custom("Roboto-Regular", size: 15))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                         .bold()
                                     Text("This quotation includes GST")
                                         .font(.custom("Roboto-Regular", size: 10))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                 }
                                 Spacer()
                                 Image("arrow_forward_ios")
@@ -254,12 +254,12 @@ struct HomeScreen: View {
                                 HStack {
                                     Text("Total")
                                         .font(.custom("Roboto-Regular", size: 15))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                         .bold()
                                     Spacer()
                                     Text("₹24,000")
                                         .font(.custom("Roboto-Regular", size: 15))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                         .bold()
                                 }
                                 .padding(.horizontal, 18)
@@ -291,7 +291,7 @@ struct HomeScreen: View {
                             HStack(alignment: .center) {
                                 Text("You Should Know")
                                     .font(.custom("Roboto-Regular", size: 15))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 Spacer()
                                 Text("View All")
@@ -309,10 +309,10 @@ struct HomeScreen: View {
                                 HStack {
                                     Circle()
                                         .frame(width: 6, height: 6)
-                                        .foregroundStyle(Color("grayColor"))
+                                        .foregroundStyle(Color("customGrayColor"))
                                     Text("SSR charges are Subject to applicability")
                                         .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                     Spacer()
                                 }
                                 .padding(.leading, 18)
@@ -320,10 +320,10 @@ struct HomeScreen: View {
                                 HStack {
                                     Circle()
                                         .frame(width: 6, height: 6)
-                                        .foregroundStyle(Color("grayColor"))
+                                        .foregroundStyle(Color("customGrayColor"))
                                     Text("Plug in charges are Subject to applicability")
                                         .font(.custom("Roboto-Regular", size: 12))
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                     Spacer()
                                 }
                                 .padding(.leading, 18)
@@ -345,7 +345,7 @@ struct HomeScreen: View {
                             HStack(alignment: .center) {
                                 Text("Add On Services")
                                     .font(.custom("Roboto-Regular", size: 15))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 Spacer()
                                 Text("View All")
@@ -383,7 +383,7 @@ struct HomeScreen: View {
                             VStack(alignment: .leading, spacing: 7) {
                                 Text("Banana")
                                     .font(.custom("Roboto-Regular", size: 18))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 
                                 Rectangle()
@@ -432,7 +432,7 @@ struct HomeScreen: View {
                             HStack(alignment: .center) {
                                 Text("Offers & Coupon Codes")
                                     .font(.custom("Roboto-Regular", size: 15))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 Spacer()
                                 Image("arrow_forward_ios")
@@ -453,7 +453,7 @@ struct HomeScreen: View {
                                         .textFieldStyle(.plain)
                                     Rectangle()
                                         .frame(height: 1)
-                                        .foregroundStyle(Color("grayColor"))
+                                        .foregroundStyle(Color("customGrayColor"))
                                 }
                                 
                                 Button("APPLY") {
@@ -476,7 +476,7 @@ struct HomeScreen: View {
                                     Text("ZEROFEE")
                                         .font(.custom("Roboto-Regular", size: 14))
                                         .fontWeight(.semibold)
-                                        .foregroundColor(Color("blackColor"))
+                                        .foregroundColor(Color("customBlackColor"))
                                     
                                     Text("Don’t pay any booking fee using this coupon")
                                         .lineLimit(2)
@@ -505,7 +505,7 @@ struct HomeScreen: View {
                             HStack(alignment: .center) {
                                 Text("Cancellation Policy")
                                     .font(.custom("Roboto-Regular", size: 15))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 Spacer()
                                 Image("arrow_forward_ios")
@@ -527,7 +527,7 @@ struct HomeScreen: View {
                                 
                                 Text("Booking cancellation fee of $25/container will be applicable if the booking is cancelled.")
                                     .font(.custom("Roboto-Regular", size: 12))
-                                    .foregroundStyle(Color("grayColor"))
+                                    .foregroundStyle(Color("customGrayColor"))
                                     .fixedSize(horizontal: false, vertical: true)
                             }
                             .padding(.horizontal, 14)
@@ -571,7 +571,7 @@ struct HomeScreen: View {
                             HStack(alignment: .center) {
                                 Text("FAQ’s")
                                     .font(.custom("Roboto-Regular", size: 15))
-                                    .foregroundColor(Color("blackColor"))
+                                    .foregroundColor(Color("customBlackColor"))
                                     .bold()
                                 Spacer()
                                 Image("arrow_forward_ios")
@@ -667,7 +667,7 @@ struct AddOnServiceCell: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(service.serviceName)
                     .font(.custom("Roboto-Regular", size: 12))
-                    .foregroundStyle(Color("blackColor"))
+                    .foregroundStyle(Color("customBlackColor"))
                 
                 Text(service.serviceDetails)
                     .font(.custom("Roboto-Regular", size: 10))
@@ -699,11 +699,11 @@ struct QuotationCell: View {
         HStack {
             Text(quotation.name)
                 .font(.custom("Roboto-Regular", size: 12))
-                .foregroundColor(Color("blackColor"))
+                .foregroundColor(Color("customBlackColor"))
             Spacer()
             Text(quotation.charge)
                 .font(.custom("Roboto-Regular", size: 14))
-                .foregroundColor(Color("blackColor"))
+                .foregroundColor(Color("customBlackColor"))
                 .bold()
         }
     }

@@ -21,7 +21,7 @@ struct RateDisplayView: View {
         VStack(alignment: .leading) {
             Text("Upcoming Vessels")
                 .font(.custom("Roboto-Regular", size: 16))
-                .foregroundStyle(Color("blackColor"))
+                .foregroundStyle(Color("customBlackColor"))
                 .bold()
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -42,7 +42,7 @@ struct RateDisplayView: View {
                 
                 Text("Freights For Onion ")
                     .font(.custom("Roboto-Regular", size: 16))
-                    .foregroundStyle(Color("blackColor"))
+                    .foregroundStyle(Color("customBlackColor"))
                     .bold()
             }
             .padding(.top, 15)
@@ -71,7 +71,7 @@ struct VesselCell: View {
         VStack(alignment: .center, spacing: 6) {
             Text("MONTEPELLIER")
                 .font(.custom("Roboto-Regular", size: 12))
-                .foregroundStyle(Color("blackColor"))
+                .foregroundStyle(Color("customBlackColor"))
             
             Text("28 July  I  Tue")
                 .font(.custom("Roboto-Regular", size: 12))
@@ -101,7 +101,7 @@ struct FrightCell: View {
                 
                 Text("28 Jul")
                     .font(.custom("Roboto-Regular", size: 12))
-                    .foregroundStyle(Color("blackColor"))
+                    .foregroundStyle(Color("customBlackColor"))
                     .padding(.leading, 15)
                 
                 VStack(alignment: .center, spacing: 0) {
@@ -122,14 +122,14 @@ struct FrightCell: View {
                 
                 Text("31 Jul")
                     .font(.custom("Roboto-Regular", size: 12))
-                    .foregroundStyle(Color("blackColor"))
+                    .foregroundStyle(Color("customBlackColor"))
                 
                 Spacer()
                 
                 VStack(alignment: .center) {
                     Text("$2,435")
                         .font(.custom("Roboto-Regular", size: 16))
-                        .foregroundStyle(Color("blackColor"))
+                        .foregroundStyle(Color("customBlackColor"))
                     
                     HStack {
                         Text("$2,535")
